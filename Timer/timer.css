@@ -1,0 +1,69 @@
+body
+	{
+		padding:2vw;
+		margin:10vw;
+		left-margin:3vw;
+	}
+	
+#sofia
+	{
+		font-family: 'Sofia';
+		font-size:6vw;
+	}
+	
+.pad{
+		padding:0vw;
+	}
+	
+#clocktime
+	{
+		margin: 5vw 3vw 6vw 0.5vw;/*top  right bottom left*/
+	}
+	
+.clockbox
+	{
+		width: 20vw;
+	
+	}
+	
+#clocktime
+	{
+	
+	font-weight:2vw;
+	text-align: center;
+	font-size: 32vw;
+	}
+	
+#clocktime 
+	{
+	
+	font-weight:1vw;
+	text-align: center;
+	font-size: 3vw;
+	width:100%;
+	position:relatve;
+	}
+	
+	
+#block
+	{
+		
+		display:inline-block;
+		width:10%;
+		height:11vw; 
+		position: relative;
+	}
+#block .innerblock
+	{
+		 position: relative;
+		 left:0.5vw;
+		 top:2vw; 
+		 padding:1vw 1vw 2vw 1vw;
+	}
+.insidetext
+	{
+		 position: relative;
+		 left:0.5vw;
+		 top:3.5vw;
+		 font-size:1.5vw
+	}
