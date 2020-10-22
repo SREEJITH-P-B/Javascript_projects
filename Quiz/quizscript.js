@@ -36,44 +36,44 @@ window.addEventListener('DOMContentLoaded', function(e){
 		var quizMessage = document.getElementById('quizMessage');
 		quizMessage.style.display = 'none';
 		document.getElementById('nextButton').addEventListener('click', function(){
-																					if(!quizOver)
-																					{
-																						var radioBtnsChecked = document.querySelector('input[type=radio]:checked');
-																						if (radioBtnsChecked === null)
-																						{
-																							quizMessage.innerText = 'Please select an answer';
-																							quizMessage.style.display = 'block';
-																						} 
-																						else 
-																						{
-																							console.log(radioBtnsChecked.value);
-																							quizMessage.style.display = 'none';
-																							if (parseInt(radioBtnsChecked.value) === questions[currentQuestion].correctAnswer)
-																							{
-																								correctAnswers++;
-																							}
-																							currentQuestion++;
-																							if (currentQuestion < questions.length)
-																							{
-																									displayCurrentQuestion();
-																							}
-																							else 
-																							{
-																								displayScore();
-																								document.getElementById('nextButton').innerText = 'Play Again?';
-																								quizOver = true;
-																							}
-																						}   
-																					} 
-																					else
-																					{
-																						quizOver = false;
-																						document.getElementById('nextButton').innerText = 'Next Question';
-																						resetQuiz();
-																						displayCurrentQuestion();
-																						hideScore();
+								if(!quizOver)
+									{
+										var radioBtnsChecked = document.querySelector('input[type=radio]:checked');
+										if (radioBtnsChecked === null)
+										{
+											quizMessage.innerText = 'Please select an answer';
+											quizMessage.style.display = 'block';
+										} 
+										else 
+										{
+											console.log(radioBtnsChecked.value);
+											quizMessage.style.display = 'none';
+											if (parseInt(radioBtnsChecked.value) === questions[currentQuestion].correctAnswer)
+												{
+												correctAnswers++;
+												}
+											currentQuestion++;
+											if (currentQuestion < questions.length)
+												{
+												displayCurrentQuestion();
+												}
+											else 
+												{
+												displayScore();
+												document.getElementById('nextButton').innerText = 'Play Again?';
+												quizOver = true;
+												}
+											}   
+										} 
+									else
+										{
+											quizOver = false;
+											document.getElementById('nextButton').innerText = 'Next Question';
+											resetQuiz();
+											displayCurrentQuestion();
+											hideScore();
 																					}
-																	});
+										});
 });
 
 
